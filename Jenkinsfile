@@ -5,7 +5,7 @@ node {
             echo 'Building....'
                 steps {
 
-                    sh 
+                    sh 'echo hello world!! im test build'
                 }
         }
     }
