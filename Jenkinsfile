@@ -1,8 +1,8 @@
 node {
     // Assign to docker slave(s) label, could also be 'any'
-    agent {
-        label 'docker' 
-    }
+    // agent {
+    //     label 'docker' 
+    // }
 
     docker.image('node:8').inside {
         // stage('Build') {
