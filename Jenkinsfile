@@ -1,7 +1,15 @@
 node {
-    stage('Build') {
-        echo 'Building....'
+
+    docker.image('node:8').inside {
+        stage('Build') {
+            echo 'Building....'
+                steps {
+
+                    sh 
+                }
+        }
     }
+
     stage('Test') {
         echo 'Testing....'
     }
