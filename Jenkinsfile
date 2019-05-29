@@ -22,6 +22,14 @@ node {
     }
     // }
 
+    docker.image('debian:9').inside {
+        stage('Testdebia') {
+            def dockerHome = tool 'myDocker'
+                // env.PATH = "${dockerHome}/bin:${env.PATH}"
+                env.PATH = "/usr/bin:${env.PATH}"
+                sh 'node --version'
+        }
+    }
     stage('Test') {
         echo 'Testing....'
     }
