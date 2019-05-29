@@ -21,6 +21,7 @@ node {
                 sh 'ls -lah'
                 sh 'pwd'
                 sh 'node --version'
+                sh 'git clone https://github.com/tamnil/test-jenkins-pipeline-multibranch/'
         }
     }
     // }
