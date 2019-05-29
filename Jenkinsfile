@@ -20,6 +20,7 @@ node {
                 sh 'cat /etc/os-release'
                 sh 'ls -lah'
                 sh 'pwd'
+                sh 'node --version'
         }
     }
     // }
@@ -29,7 +30,10 @@ node {
             def dockerHome = tool 'myDocker'
                 // env.PATH = "${dockerHome}/bin:${env.PATH}"
                 env.PATH = "/usr/bin:${env.PATH}"
-                sh 'node --version'
+                sh 'cat /etc/os-release'
+                sh 'ls -lah'
+                sh 'pwd'
+                sh 'env'
         }
     }
     stage('Test') {
