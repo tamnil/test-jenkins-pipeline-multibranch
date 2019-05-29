@@ -8,7 +8,7 @@ node {
         //             sh 'echo hello world!! im test build'
         //         }
         // }
-        docker.image('node:7-alpine').inside {
+        docker.image('node').inside {
             stage('Test') {
                 sh 'node --version'
             }
