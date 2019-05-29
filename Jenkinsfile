@@ -4,7 +4,7 @@ node {
     //     label 'docker' 
     // }
 
-    docker.image('node:8').inside {
+    // docker.image('node:8').inside {
         // stage('Build') {
         //     echo 'Building....'
         //         steps {
@@ -20,7 +20,7 @@ node {
                     sh 'node --version'
             }
         }
-    }
+    // }
 
     stage('Test') {
         echo 'Testing....'
