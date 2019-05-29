@@ -11,8 +11,8 @@ node {
         docker.image('node').inside {
             stage('Test') {
                 def dockerHome = tool 'myDocker'
-                    env.PATH = "${dockerHome}/bin:${env.PATH}"
-                    sh 'node --version'
+                env.PATH = "${dockerHome}/bin:${env.PATH}"
+                sh 'node --version'
             }
         }
     }
