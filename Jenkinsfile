@@ -10,7 +10,9 @@ node {
         // }
         docker.image('node').inside {
             stage('Test') {
-                sh 'node --version'
+                def dockerHome = tool 'myDocker'
+                    env.PATH = "${dockerHome}/bin:${env.PATH}"
+                    sh 'node --version'
             }
         }
     }
