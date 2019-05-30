@@ -13,18 +13,20 @@ node {
     //         }
     // }
     stage('first') {
-        docker.image('node:8').inside {
-            stage('Test1') {
-                def dockerHome = tool 'myDocker'
-                    // env.PATH = "${dockerHome}/bin:${env.PATH}"
-                    env.PATH = "/usr/bin:${env.PATH}"
-                    sh 'cat /etc/os-release'
-                    sh 'ls -lah'
-                    sh 'pwd'
-                    sh 'node --version'
-            }
-        }
-        // }
+
+        sh pwd && ls -la && whoiam
+            // docker.image('node:8').inside {
+            //     stage('Test1') {
+            //         def dockerHome = tool 'myDocker'
+            //             // env.PATH = "${dockerHome}/bin:${env.PATH}"
+            //             env.PATH = "/usr/bin:${env.PATH}"
+            //             sh 'cat /etc/os-release'
+            //             sh 'ls -lah'
+            //             sh 'pwd'
+            //             sh 'node --version'
+            //     }
+    }
+    // }
 
     docker.image('debian:9').inside {
         stage('Testdebia') {
