@@ -30,7 +30,8 @@ node {
 
     docker.image('debian:9').inside {
         stage('Testdebia') {
-            def dockerHome = tool 'myDocker1'
+        sh 'ls -lah'
+            def dockerHome = tool 'myDocker'
                 // env.PATH = "${dockerHome}/bin:${env.PATH}"
                 env.PATH = "/usr/bin:${env.PATH}"
                 sh 'cat /etc/os-release'
