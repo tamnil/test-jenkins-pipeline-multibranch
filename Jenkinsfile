@@ -48,4 +48,3 @@ stage('Test') {
 stage('Deploy') {
     echo 'Deploying....'
 }
-}
