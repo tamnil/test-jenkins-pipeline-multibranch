@@ -14,7 +14,7 @@ node {
     // }
     stage('first') {
 
-        sh pwd && ls -la && whoiam
+        sh 'pwd && ls -la && whoiam'
             // docker.image('node:8').inside {
             //     stage('Test1') {
             //         def dockerHome = tool 'myDocker'
