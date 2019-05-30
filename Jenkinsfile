@@ -46,6 +46,7 @@ node {
                 sh 'pwd'
                 sh 'env'
                 sh 'cat Dockerfile'
+                sh 'ls /etc'
                 // sh 'git clone https://github.com/tamnil/test-jenkins-pipeline-multibranch/'
                 // sh 'apt install docker'
         }
