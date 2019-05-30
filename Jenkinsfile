@@ -14,12 +14,12 @@ node {
     // }
     stage('first') {
 
-checkout scm
-        sh 'pwd && ls -la '
-        sh 'cat /etc/os-release'
-        sh 'env'
-        ls '/home'
-        // sh 'ls src -lah'
+        checkout scm
+            sh 'pwd && ls -la '
+            sh 'cat /etc/os-release'
+            sh 'env'
+            sh '/home'
+            // sh 'ls src -lah'
             // docker.image('node:8').inside {
             //     stage('Test1') {
             //         def dockerHome = tool 'myDocker'
@@ -34,6 +34,7 @@ checkout scm
     // }
 
     docker.image('debian:9').inside {
+
         stage('Testdebia') {
             def dockerHome = tool 'myDocker'
                 // env.PATH = "${dockerHome}/bin:${env.PATH}"
@@ -51,7 +52,7 @@ checkout scm
 }
 stage('Test') {
     echo 'Testing....'
-    sh 'cat /etc/os-release'
+        sh 'cat /etc/os-release'
 }
 stage('Deploy') {
     echo 'Deploying....'
