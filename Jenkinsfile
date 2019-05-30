@@ -35,7 +35,8 @@ node {
                 sh 'ls -lah'
                 sh 'pwd'
                 sh 'env'
-                sh 'git clone https://github.com/tamnil/test-jenkins-pipeline-multibranch/'
+                // sh 'git clone https://github.com/tamnil/test-jenkins-pipeline-multibranch/'
+                sh 'apt install docker'
         }
     }
 }
