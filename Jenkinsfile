@@ -42,6 +42,7 @@ checkout scm
                 sh 'ls -lah'
                 sh 'pwd'
                 sh 'env'
+                sh 'cat Dockerfile'
                 // sh 'git clone https://github.com/tamnil/test-jenkins-pipeline-multibranch/'
                 // sh 'apt install docker'
         }
