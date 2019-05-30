@@ -53,7 +53,7 @@ node {
 }
 stage('Test') {
     echo 'Testing....'
-        sh 'cat /etc/os-release'
+        // sh 'cat /etc/os-release'
 }
 stage('Deploy') {
     echo 'Deploying....'
