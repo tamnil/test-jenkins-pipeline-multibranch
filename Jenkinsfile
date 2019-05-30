@@ -40,6 +40,7 @@ checkout scm
                 env.PATH = "/usr/bin:${env.PATH}"
                 sh 'cat /etc/os-release'
                 sh 'ls -lah'
+                sh 'ls /home'
                 sh 'pwd'
                 sh 'env'
                 sh 'cat Dockerfile'
