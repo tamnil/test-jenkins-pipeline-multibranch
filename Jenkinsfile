@@ -28,7 +28,7 @@ node {
 
     docker.image('debian:9').inside {
         stage('Testdebia') {
-            def dockerHome = tool 'myDocker'
+            def dockerHome = tool 'myDocker1'
                 // env.PATH = "${dockerHome}/bin:${env.PATH}"
                 env.PATH = "/usr/bin:${env.PATH}"
                 sh 'cat /etc/os-release'
@@ -36,7 +36,7 @@ node {
                 sh 'pwd'
                 sh 'env'
                 // sh 'git clone https://github.com/tamnil/test-jenkins-pipeline-multibranch/'
-                sh 'apt install docker'
+                // sh 'apt install docker'
         }
     }
 }
