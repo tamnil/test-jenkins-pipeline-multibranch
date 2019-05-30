@@ -18,6 +18,7 @@ node {
             sh 'pwd && ls -la '
             sh 'cat /etc/os-release'
             sh 'env'
+            sh 'docker-compose up'
 
             // sh 'ls src -lah'
             // docker.image('node:8').inside {
