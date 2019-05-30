@@ -14,6 +14,7 @@ node {
     // }
     stage('first') {
 
+checkout scm
         sh 'pwd && ls -la '
         sh 'cat /etc/os-release'
         sh 'env'
