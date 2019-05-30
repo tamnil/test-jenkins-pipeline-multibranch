@@ -15,7 +15,8 @@ node {
     stage('first') {
 
         sh 'pwd && ls -la '
-        sh 'cat /os-release'
+        sh 'cat /etc/os-release'
+        sh 'env'
             // docker.image('node:8').inside {
             //     stage('Test1') {
             //         def dockerHome = tool 'myDocker'
