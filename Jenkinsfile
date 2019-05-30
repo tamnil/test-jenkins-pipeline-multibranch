@@ -18,7 +18,6 @@ node {
             sh 'pwd && ls -la '
             sh 'cat /etc/os-release'
             sh 'env'
-            sh 'tree /'
 
             // sh 'ls src -lah'
             // docker.image('node:8').inside {
